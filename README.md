@@ -49,7 +49,7 @@ Actively in development — see `ARCHITECTURE.md` for design details and progres
 ## How to Run
 
 1. Install PostgreSQL locally, create a database (see `application.properties` for expected name)
-2. Set your own credentials in `src/main/resources/application.properties`
+2. Copy `application.properties.example` to `src/main/resources/application.properties` and fill in your own PostgreSQL credentials
 3. `./mvnw spring-boot:run` (or run `PatientQueueSystemApplication` from your IDE)
 4. API available at `http://localhost:8080`
 
