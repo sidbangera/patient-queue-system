@@ -1,0 +1,5 @@
+spring.application.name=patient-queue-system
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_db_name
+spring.datasource.username=your_postgres_username
+spring.datasource.password=your_postgres_password
+spring.jpa.hibernate.ddl-auto=update
