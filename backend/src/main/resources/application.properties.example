@@ -1,0 +1,11 @@
+# Copy into your LOCAL (gitignored) application.properties, or use environment variables.
+spring.datasource.url=${DB_URL:jdbc:postgresql://localhost:5432/patient_queue}
+spring.datasource.username=${DB_USERNAME:postgres}
+spring.datasource.password=${DB_PASSWORD:}
+# Do not change to update/create/drop. Apply SQL scripts explicitly.
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.open-in-view=false
+jwt.secret=${JWT_SECRET}
+jwt.expiration-ms=36000000
+app.clinic-zone=${CLINIC_ZONE:Asia/Kolkata}
+app.cors.allowed-origins=${CORS_ORIGINS:http://localhost:*,http://127.0.0.1:*}

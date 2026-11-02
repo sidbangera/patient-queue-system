@@ -1,35 +1,158 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# ==========================================
+# PQueue - Spring Boot + Flutter
+# Root .gitignore
+# ==========================================
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# ------------------------------------------
+# Secrets and local environment configuration
+# ------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+
+
+# Private runtime configuration
+/backend/src/main/resources/application.properties
+/backend/src/main/resources/application-*.properties
+
+# Preserve sanitized configuration examples
+!/backend/src/main/resources/application.properties.example
+!/backend/src/main/resources/application-*.properties.example
+
+# Test configuration can be committed after checking for secrets
+
+application.yml
+application.yaml
+application-*.yml
+application-*.yaml
+!application.yml.example
+!application.yaml.example
+!application-*.yml.example
+!application-*.yaml.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+key.properties
+**/google-services.json
+**/GoogleService-Info.plist
+
+# ------------------------------------------
+# Database backups and local data
+# ------------------------------------------
+backups/
+*.backup
+*.dump
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.db
+
+# Keep SQL source and migration files tracked.
+# For example: backend/database/*.sql
+
+# ------------------------------------------
+# Spring Boot / Maven / Java
+# ------------------------------------------
+**/target/
+**/.mvn/timing.properties
+**/dependency-reduced-pom.xml
+**/hs_err_pid*
+**/replay_pid*
+*.class
+
+# Keep Maven wrapper files:
+# backend/.mvn/
+# backend/mvnw
+# backend/mvnw.cmd
+
+# ------------------------------------------
+# Flutter / Dart
+# ------------------------------------------
+**/.dart_tool/
+**/.flutter_tool_state
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/coverage/
+
+**/build/
+**/flutter_*.png
+
+# Flutter platform-specific generated files
+**/android/local.properties
+**/android/key.properties
+**/android/.gradle/
+**/android/.cxx/
+**/android/app/.cxx/
+**/android/captures/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/macos/Flutter/ephemeral/
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# Keep Flutter application source, assets,
+# pubspec.yaml and pubspec.lock.
+
+# ------------------------------------------
+# IDE and editor files
+# ------------------------------------------
+.idea/
+**/.idea/
+.vscode/
+**/.vscode/
 *.iml
 *.ipr
+*.iws
+*.suo
+*.user
+*.code-workspace
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# ------------------------------------------
+# Operating system files
+# ------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-### VS Code ###
-.vscode/
+# ------------------------------------------
+# Logs and temporary files
+# ------------------------------------------
+*.log
+*.log.*
+logs/
+**/logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.bak
+*.orig
 
-src/main/resources/application.properties
+# ------------------------------------------
+# Test artifacts and reports
+# ------------------------------------------
+**/test-results/
+**/screenshots/failures/
+**/surefire-reports/
+**/failsafe-reports/
+
+# ------------------------------------------
+# Local installation and delivery artifacts
+# ------------------------------------------
+pqueue-v5-delivery/
+pqueue-v4-patch/
+*.zip
+*.7z
+*.rar
